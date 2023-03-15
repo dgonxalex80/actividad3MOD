@@ -1,0 +1,143 @@
+---
+title: <span style="color:#034a94"> **Actividad 3**</span>
+output:
+html_document:
+css: styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
+library(summarytools)
+
+
+c1 ="#FF7F00"  # naranja - color primario 
+c2 ="#034A94"  # azul oscuro - color secundario
+c3 ="#0EB0C6"  # azul claro - color terciario
+c4 ="#686868"  # gris - color texto
+```
+
+
+<br/><br/>
+
+# <span style="color:#034a94">**Problema 1 : Rotación de cargo**</span>
+
+<br/> <br/>
+
+<center>
+```{r, echo=FALSE, out.width="80%", fig.align = "center"}
+knitr::include_graphics("img/empleados.png")
+```
+Tomada de: pixabay.com
+</center>
+
+<br/>
+
+1. Seleccione 3 **variables categóricas** (distintas de rotación) y 3 **variables cuantitativas**, que se consideren estén relacionadas con la rotación. 
+
+**Nota**: Debes justificar porque estas variables están relacionadas y que tipo de relación se espera entre ellas (Hipótesis). 
+
+**Ejemplo**: Se espera que las **horas extra** se relacionen con la **rotación** ya que las personas podrían desgastarse mas al trabajar horas extra y descuidan aspectos personales. La hipótesis es que las personas que trabajan horas extra tienen mayor posibilidad de rotar que las que no trabajan extra. (serian 6, una por variable).
+
+<br/>
+
+2. Realiza un análisis univariado (caracterización) de la información contenida en la base de datos `rotacion`. 
+
+**Nota**: Los indicadores o gráficos se usan dependiendo del tipo de variable (cuantitativas o cualitativas). Incluir interpretaciones de la variable `rotacion`.
+
+<br/>
+
+3. Realiza un análisis de bivariado en donde la variable respuesta sea `rotacion` codificada de la siguiente manera ($y = 1$ es si rotación, $y = 0$ es no rotación). Con base en estos resultados identifique cuales son las variables determinantes de la rotación e interpretar el signo del coeficiente estimado. Compare estos resultados con la hipotesis planteada en el punto 2.
+
+<br/>
+
+4. Realiza la estimación de un **modelo de regresión logístico** en el cual la variable respuesta es `rotacion` ($y=1$ es si rotación, $y=0$ es no rotación) y las covariables las 6 seleccionadas en el punto 1. Interprete los coeficientes del modelo y la significancia de los parámetros.
+
+<br/>
+
+5. Evaluar el poder predictivo del modelo con base en la curva **ROC** y el **AUC**.
+
+<br/>
+6. Realiza una predicción la probabilidad de que un individuo (hipotético) rote y defina un corte para decidir si se debe intervenir a este empleado o no (posible estrategia para motivar al empleado).
+
+<br/>
+
+7. En las conclusiones adicione una discución sobre cuál sería la estrategia para disminuir la rotación en la empresa (con base en las variables que resultaron significativas en el punto 3). 
+
+**Ejemplo**: Mejorar el ambiente laboral, los incentivos económicos, distribuir la carga de horas extra (menos turnos y mas personal).
+
+
+<br/>
+
+### <span style="color:#034a94">**Entregable 1**</span>
+
+<br/>
+
+Informe en formato pdf, con los puntos solicidados
+
+
+
+<br/><br/><br/>
+
+# <span style="color:#034a94">**Problema 2**</span>
+
+<br/> <br/>
+
+<center>
+```{r, echo=FALSE, out.width="800%", fig.align = "center"}
+knitr::include_graphics("img/credito.png")
+```
+
+Tomada de: pixabay.com
+</center>
+
+<br/>
+
+
+Con base en los datos de créditos proponga un **modelo de regresión logístico múltiple** que permita predecir el riesgo de default o de no pago en función de las covariables que considere importantes y seleccionándolas de acuerdo con un proceso adecuado. Tenga en cuenta realizar una evaluación de la significancia de los parámetros, interpretación y proponga un método de evaluación por medio de validación cruzada. Presente métricas apropiadas como el **AUC** y la curva **ROC**.
+
+<br/>
+
+### <span style="color:#034a94">**Entregable 2**</span>
+
+<br/>
+
+Informe ejecutivo, máximo de dos hojas, con anexos soporte de las estimaciones en formato pdf
+
+<br/><br/>
+
+
+### <span style="color:#FF7F00">**Carga de datos** </span>
+
+```{r, eval=FALSE}
+install.packages("devtools") # solo la primera vez
+devtools::install_github("dgonxalex80/paqueteMOD", force =TRUE)
+library(paqueteMOD)
+data("rotacion")
+data("creditos")
+```
+
+<br/><br/>
+
+
+#### **Data : rotacion**
+
+```{r, warning=FALSE, message=FALSE}
+library(paqueteMOD)
+library(dplyr)
+data("rotacion")
+glimpse(rotacion)
+
+```
+<br/><br/>
+
+#### **Data creditos**
+
+```{r, warning=FALSE, message=FALSE}
+library(paqueteMOD)
+library(dplyr)
+data("creditos")
+glimpse(creditos)
+
+```
+
+*Adaptado de Weiers, Ronald M, Introducción a la estadística para Negocios., 2006.*
