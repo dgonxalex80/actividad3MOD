@@ -13,7 +13,7 @@
 
 <title> Actividad 3</title>
 
-<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/header-attrs-2.24/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
@@ -263,166 +263,171 @@ $(document).ready(function () {
 
 
 <p><br/><br/></p>
-<div id="problema-1-rotación-de-cargo" class="section level1">
-<h1><span style="color:#034a94"><strong>Problema 1 : Rotación de
+<div id="problema-rotación-de-cargo" class="section level1">
+<h1><span style="color:#034a94"><strong>Problema: Rotación de
 cargo</strong></span></h1>
 <p><br/> <br/></p>
 <center>
 <img src="img/empleados.png" width="80%" style="display: block; margin: auto;" />
-Tomada de: pixabay.com
+<sub>Tomada de: pixabay.com </sub>
 </center>
+<p><br/><br/></p>
+<p>En una organización, se busca comprender y prever los factores que
+influyen en la <strong>rotación de empleados</strong> entre distintos
+cargos. La empresa ha recopilado datos históricos sobre el empleo de sus
+trabajadores, incluyendo variables como la antigüedad en el cargo
+actual, el nivel de satisfacción laboral, el salario actual, edad y
+otros factores relevantes. La gerencia planea desarrollar un modelo de
+regresión logística que permita estimar la probabilidad de que un
+empleado cambie de cargo en el próximo período y determinar cuales
+factores indicen en mayor proporción a estos cambios.</p>
 <p><br/></p>
-<ol style="list-style-type: decimal">
-<li>Seleccione 3 <strong>variables categóricas</strong> (distintas de
+<p>Con esta información, la empresa podrá tomar medidas proactivas para
+retener a su talento clave, identificar áreas de mejora en la gestión de
+recursos humanos y fomentar un ambiente laboral más estable y tranquilo.
+La predicción de la probabilidad de rotación de empleados ayudará a la
+empresa a tomar decisiones estratégicas informadas y a mantener un
+equipo de trabajo comprometido y satisfecho en sus roles actuales.</p>
+<p><br/></p>
+<p>A continuación se describen los pasos que la gerencia ha propuesto
+para el análisis:</p>
+<p><br/><br/></p>
+<div id="selección-de-variables" class="section level2">
+<h2><span style="color:#034a94"> <strong>1. Selección de
+variables</strong></span></h2>
+<p>Seleccione 3 <strong>variables categóricas</strong> (distintas de
 rotación) y 3 <strong>variables cuantitativas</strong>, que se
-consideren estén relacionadas con la rotación.</li>
-</ol>
-<p><strong>Nota</strong>: Debes justificar porque estas variables están
-relacionadas y que tipo de relación se espera entre ellas
-(Hipótesis).</p>
-<p><strong>Ejemplo</strong>: Se espera que las <strong>horas
-extra</strong> se relacionen con la <strong>rotación</strong> ya que las
-personas podrían desgastarse mas al trabajar horas extra y descuidan
-aspectos personales. La hipótesis es que las personas que trabajan horas
-extra tienen mayor posibilidad de rotar que las que no trabajan extra.
-(serian 6, una por variable).</p>
+consideren estén relacionadas con la rotación.</p>
 <p><br/></p>
-<ol start="2" style="list-style-type: decimal">
-<li>Realiza un análisis univariado (caracterización) de la información
-contenida en la base de datos <code>rotacion</code>.</li>
-</ol>
-<p><strong>Nota</strong>: Los indicadores o gráficos se usan dependiendo
-del tipo de variable (cuantitativas o cualitativas). Incluir
-interpretaciones de la variable <code>rotacion</code>.</p>
+<div id="nota" class="section level3">
+<h3><span style="color:#686868"> <strong>Nota</strong></span>:</h3>
+<p>Debes justificar porque estas variables están relacionadas y que tipo
+de relación se espera entre ellas (Hipótesis).</p>
+<p><br/><br/></p>
+</div>
+<div id="ejemplo" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span>:</h3>
+<p>Se espera que las <strong>horas extra</strong> se relacionen con la
+<strong>rotación</strong> ya que las personas podrían desgastarse mas al
+trabajar horas extra y descuidan aspectos personales. La hipótesis es
+que las personas que trabajan horas extra tienen mayor posibilidad de
+rotar que las que no trabajan extra. (serian 6, una por variable).</p>
+<p><br/><br/><br/></p>
+</div>
+</div>
+<div id="análisis-univariado" class="section level2">
+<h2><span style="color:#034a94"> <strong>2. Análisis
+univariado</strong></h2>
+<p>Realiza un análisis univariado (caracterización) de la información
+contenida en la base de datos <code>rotacion</code>.</p>
 <p><br/></p>
-<ol start="3" style="list-style-type: decimal">
-<li>Realiza un análisis de bivariado en donde la variable respuesta sea
+<div id="nota-1" class="section level3">
+<h3><span style="color:#686868"> <strong>Nota</strong></span>:</h3>
+<p>Los indicadores o gráficos se usan dependiendo del tipo de variable
+(cuantitativas o cualitativas). Incluir interpretaciones de la variable
+<code>rotacion</code>.</p>
+<p><br/><br/><br/></p>
+</div>
+</div>
+<div id="análisis-bivariado" class="section level2">
+<h2><span style="color:#034a94"> <strong>3. Análisis
+bivariado</strong></h2>
+<p>Realiza un análisis de bivariado en donde la variable respuesta sea
 <code>rotacion</code> codificada de la siguiente manera (<span
 class="math inline">\(y = 1\)</span> es si rotación, <span
 class="math inline">\(y = 0\)</span> es no rotación). Con base en estos
 resultados identifique cuales son las variables determinantes de la
 rotación e interpretar el signo del coeficiente estimado. Compare estos
-resultados con la hipotesis planteada en el punto 2.</li>
-</ol>
-<p><br/></p>
-<ol start="4" style="list-style-type: decimal">
-<li>Realiza la estimación de un <strong>modelo de regresión
+resultados con la hipotesis planteada en el punto 2.</p>
+<p><br/><br/><br/></p>
+</div>
+<div id="estimación-del-modelo" class="section level2">
+<h2><span style="color:#034a94"> <strong>4. Estimación del
+modelo</strong></h2>
+<p>Realiza la estimación de un <strong>modelo de regresión
 logístico</strong> en el cual la variable respuesta es
 <code>rotacion</code> (<span class="math inline">\(y=1\)</span> es si
 rotación, <span class="math inline">\(y=0\)</span> es no rotación) y las
 covariables las 6 seleccionadas en el punto 1. Interprete los
-coeficientes del modelo y la significancia de los parámetros.</li>
-</ol>
-<p><br/></p>
-<ol start="5" style="list-style-type: decimal">
-<li>Evaluar el poder predictivo del modelo con base en la curva
-<strong>ROC</strong> y el <strong>AUC</strong>.</li>
-</ol>
-<p><br/> 6. Realiza una predicción la probabilidad de que un individuo
+coeficientes del modelo y la significancia de los parámetros.</p>
+<p><br/><br/><br/></p>
+</div>
+<div id="evaluación" class="section level2">
+<h2><span style="color:#034a94"> <strong>5. Evaluación</strong></h2>
+<p>Evaluar el poder predictivo del modelo con base en la curva
+<strong>ROC</strong> y el <strong>AUC</strong>.</p>
+<p><br/><br/><br/></p>
+</div>
+<div id="predicciones" class="section level2">
+<h2><span style="color:#034a94"> <strong>6. Predicciones</strong></h2>
+<p>Realiza una predicción la probabilidad de que un individuo
 (hipotético) rote y defina un corte para decidir si se debe intervenir a
 este empleado o no (posible estrategia para motivar al empleado).</p>
-<p><br/></p>
-<ol start="7" style="list-style-type: decimal">
-<li>En las conclusiones adicione una discución sobre cuál sería la
+<p><br/><br/><br/></p>
+</div>
+<div id="conclusiones" class="section level2">
+<h2><span style="color:#034a94"> <strong>7. Conclusiones</strong></h2>
+<p>En las conclusiones adicione una discución sobre cuál sería la
 estrategia para disminuir la rotación en la empresa (con base en las
-variables que resultaron significativas en el punto 3).</li>
-</ol>
-<p><strong>Ejemplo</strong>: Mejorar el ambiente laboral, los incentivos
-económicos, distribuir la carga de horas extra (menos turnos y mas
-personal).</p>
+variables que resultaron significativas en el punto 3).</p>
 <p><br/></p>
-<div id="entregable-1" class="section level3">
-<h3><span style="color:#034a94"><strong>Entregable
-1</strong></span></h3>
-<p><br/></p>
-<p>Informe en formato pdf, con los puntos solicidados</p>
+<div id="ejemplo-1" class="section level3">
+<h3><span style="color:#FF7F00"> <strong>Ejemplo</strong></span>:</h3>
+<p>Mejorar el ambiente laboral, los incentivos económicos, distribuir la
+carga de horas extra (menos turnos y mas personal).</p>
 <p><br/><br/><br/></p>
 </div>
 </div>
-<div id="problema-2" class="section level1">
-<h1><span style="color:#034a94"><strong>Problema 2</strong></span></h1>
-<p><br/> <br/></p>
-<center>
-<p><img src="img/credito.png" width="800%" style="display: block; margin: auto;" /></p>
-Tomada de: pixabay.com
-</center>
-<p><br/></p>
-<p>Con base en los datos de créditos proponga un <strong>modelo de
-regresión logístico múltiple</strong> que permita predecir el riesgo de
-default o de no pago en función de las covariables que considere
-importantes y seleccionándolas de acuerdo con un proceso adecuado. Tenga
-en cuenta realizar una evaluación de la significancia de los parámetros,
-interpretación y proponga un método de evaluación por medio de
-validación cruzada. Presente métricas apropiadas como el
-<strong>AUC</strong> y la curva <strong>ROC</strong>.</p>
-<p><br/></p>
-<div id="entregable-2" class="section level3">
-<h3><span style="color:#034a94"><strong>Entregable
-2</strong></span></h3>
-<p><br/></p>
-<p>Informe ejecutivo, máximo de dos hojas, con anexos soporte de las
-estimaciones en formato pdf</p>
+<div id="entregable-1" class="section level2">
+<h2><span style="color:#034a94"><strong>Entregable
+1</strong></span></h2>
+<p>Informe en formato pdf, con los puntos solicidados</p>
+<p><br/><br/><br/></p>
+</div>
+<div id="carga-de-datos" class="section level2">
+<h2><span style="color:#FF7F00"><strong>Carga de datos</strong>
+</span></h2>
+<pre class="r"><code># install.packages(&quot;devtools&quot;) # solo la primera vez
+# devtools::install_github(&quot;dgonxalex80/paqueteMODELOS&quot;, force =TRUE)
+library(paqueteMODELOS)
+data(&quot;rotacion&quot;)</code></pre>
 <p><br/><br/></p>
 </div>
-<div id="carga-de-datos" class="section level3">
-<h3><span style="color:#FF7F00"><strong>Carga de datos</strong>
-</span></h3>
-<pre class="r"><code>install.packages(&quot;devtools&quot;) # solo la primera vez
-devtools::install_github(&quot;dgonxalex80/paqueteMOD&quot;, force =TRUE)
-library(paqueteMOD)
-data(&quot;rotacion&quot;)
-data(&quot;creditos&quot;)</code></pre>
-<p><br/><br/></p>
-<div id="data-rotacion" class="section level4">
-<h4><strong>Data : rotacion</strong></h4>
-<pre class="r"><code>library(paqueteMOD)
+<div id="data" class="section level2">
+<h2><span style="color:#FF7F00"> <strong>Data</strong></span></h2>
+<pre class="r"><code>library(paqueteMODELOS)
 library(dplyr)
 data(&quot;rotacion&quot;)
 glimpse(rotacion)</code></pre>
 <pre><code>Rows: 1,470
 Columns: 24
-$ rotacion                &lt;chr&gt; &quot;Si&quot;, &quot;No&quot;, &quot;Si&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;…
-$ edad                    &lt;dbl&gt; 41, 49, 37, 33, 27, 32, 59, 30, 38, 36, 35, 29…
-$ viaje.negocios          &lt;chr&gt; &quot;Raramente&quot;, &quot;Frecuentemente&quot;, &quot;Raramente&quot;, &quot;F…
-$ departamento            &lt;chr&gt; &quot;Ventas&quot;, &quot;IyD&quot;, &quot;IyD&quot;, &quot;IyD&quot;, &quot;IyD&quot;, &quot;IyD&quot;, &quot;…
-$ Ddstancia.casa          &lt;dbl&gt; 1, 8, 2, 3, 2, 2, 3, 24, 23, 27, 16, 15, 26, 1…
-$ educación               &lt;dbl&gt; 2, 1, 2, 4, 1, 2, 3, 1, 3, 3, 3, 2, 1, 2, 3, 4…
-$ campo.educación         &lt;chr&gt; &quot;Ciencias&quot;, &quot;Ciencias&quot;, &quot;Otra&quot;, &quot;Ciencias&quot;, &quot;S…
-$ satisfaccion.ambiental  &lt;dbl&gt; 2, 3, 4, 4, 1, 4, 3, 4, 4, 3, 1, 4, 1, 2, 3, 2…
-$ genero                  &lt;chr&gt; &quot;F&quot;, &quot;M&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;, &quot;M&quot;, &quot;…
-$ cargo                   &lt;chr&gt; &quot;Ejecutivo_Ventas&quot;, &quot;Investigador_Cientifico&quot;,…
-$ satisfación.laboral     &lt;dbl&gt; 4, 2, 3, 3, 2, 4, 1, 3, 3, 3, 2, 3, 3, 4, 3, 1…
-$ estado.civil            &lt;chr&gt; &quot;Soltero&quot;, &quot;Casado&quot;, &quot;Soltero&quot;, &quot;Casado&quot;, &quot;Cas…
-$ ingreso.mensual         &lt;dbl&gt; 5993, 5130, 2090, 2909, 3468, 3068, 2670, 2693…
-$ trabajos.anteriores     &lt;dbl&gt; 8, 1, 6, 1, 9, 0, 4, 1, 0, 6, 0, 0, 1, 0, 5, 1…
-$ horas.extra             &lt;chr&gt; &quot;Si&quot;, &quot;No&quot;, &quot;Si&quot;, &quot;Si&quot;, &quot;No&quot;, &quot;No&quot;, &quot;Si&quot;, &quot;No&quot;…
-$ aumento.salarial        &lt;dbl&gt; 11, 23, 15, 11, 12, 13, 20, 22, 21, 13, 13, 12…
-$ rendimiento.laboral     &lt;dbl&gt; 3, 4, 3, 3, 3, 3, 4, 4, 4, 3, 3, 3, 3, 3, 3, 3…
-$ experiencia             &lt;dbl&gt; 8, 10, 7, 8, 6, 8, 12, 1, 10, 17, 6, 10, 5, 3,…
-$ capacitaciones          &lt;dbl&gt; 0, 3, 3, 3, 3, 2, 3, 2, 2, 3, 5, 3, 1, 2, 4, 1…
-$ equilibrio.trabajo.vida &lt;dbl&gt; 1, 3, 3, 3, 3, 2, 2, 3, 3, 2, 3, 3, 2, 3, 3, 3…
-$ antiguedad              &lt;dbl&gt; 6, 10, 0, 8, 2, 7, 1, 1, 9, 7, 5, 9, 5, 2, 4, …
-$ antigüedad.cargo        &lt;dbl&gt; 4, 7, 0, 7, 2, 7, 0, 0, 7, 7, 4, 5, 2, 2, 2, 9…
-$ ultima_promoción        &lt;dbl&gt; 0, 1, 0, 3, 2, 3, 0, 0, 1, 7, 0, 0, 4, 1, 0, 8…
-$ tiempo.mismo.jefe       &lt;dbl&gt; 5, 7, 0, 0, 2, 6, 0, 0, 8, 7, 3, 8, 3, 2, 3, 8…</code></pre>
+$ Rotación                    &lt;chr&gt; &quot;Si&quot;, &quot;No&quot;, &quot;Si&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, &quot;No&quot;, …
+$ Edad                        &lt;dbl&gt; 41, 49, 37, 33, 27, 32, 59, 30, 38, 36, 35…
+$ `Viaje de Negocios`         &lt;chr&gt; &quot;Raramente&quot;, &quot;Frecuentemente&quot;, &quot;Raramente&quot;…
+$ Departamento                &lt;chr&gt; &quot;Ventas&quot;, &quot;IyD&quot;, &quot;IyD&quot;, &quot;IyD&quot;, &quot;IyD&quot;, &quot;IyD…
+$ Distancia_Casa              &lt;dbl&gt; 1, 8, 2, 3, 2, 2, 3, 24, 23, 27, 16, 15, 2…
+$ Educación                   &lt;dbl&gt; 2, 1, 2, 4, 1, 2, 3, 1, 3, 3, 3, 2, 1, 2, …
+$ Campo_Educación             &lt;chr&gt; &quot;Ciencias&quot;, &quot;Ciencias&quot;, &quot;Otra&quot;, &quot;Ciencias&quot;…
+$ Satisfacción_Ambiental      &lt;dbl&gt; 2, 3, 4, 4, 1, 4, 3, 4, 4, 3, 1, 4, 1, 2, …
+$ Genero                      &lt;chr&gt; &quot;F&quot;, &quot;M&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;, &quot;M&quot;, &quot;F&quot;, &quot;M&quot;, &quot;M…
+$ Cargo                       &lt;chr&gt; &quot;Ejecutivo_Ventas&quot;, &quot;Investigador_Cientifi…
+$ Satisfación_Laboral         &lt;dbl&gt; 4, 2, 3, 3, 2, 4, 1, 3, 3, 3, 2, 3, 3, 4, …
+$ Estado_Civil                &lt;chr&gt; &quot;Soltero&quot;, &quot;Casado&quot;, &quot;Soltero&quot;, &quot;Casado&quot;, …
+$ Ingreso_Mensual             &lt;dbl&gt; 5993, 5130, 2090, 2909, 3468, 3068, 2670, …
+$ Trabajos_Anteriores         &lt;dbl&gt; 8, 1, 6, 1, 9, 0, 4, 1, 0, 6, 0, 0, 1, 0, …
+$ Horas_Extra                 &lt;chr&gt; &quot;Si&quot;, &quot;No&quot;, &quot;Si&quot;, &quot;Si&quot;, &quot;No&quot;, &quot;No&quot;, &quot;Si&quot;, …
+$ Porcentaje_aumento_salarial &lt;dbl&gt; 11, 23, 15, 11, 12, 13, 20, 22, 21, 13, 13…
+$ Rendimiento_Laboral         &lt;dbl&gt; 3, 4, 3, 3, 3, 3, 4, 4, 4, 3, 3, 3, 3, 3, …
+$ Años_Experiencia            &lt;dbl&gt; 8, 10, 7, 8, 6, 8, 12, 1, 10, 17, 6, 10, 5…
+$ Capacitaciones              &lt;dbl&gt; 0, 3, 3, 3, 3, 2, 3, 2, 2, 3, 5, 3, 1, 2, …
+$ Equilibrio_Trabajo_Vida     &lt;dbl&gt; 1, 3, 3, 3, 3, 2, 2, 3, 3, 2, 3, 3, 2, 3, …
+$ Antigüedad                  &lt;dbl&gt; 6, 10, 0, 8, 2, 7, 1, 1, 9, 7, 5, 9, 5, 2,…
+$ Antigüedad_Cargo            &lt;dbl&gt; 4, 7, 0, 7, 2, 7, 0, 0, 7, 7, 4, 5, 2, 2, …
+$ Años_ultima_promoción       &lt;dbl&gt; 0, 1, 0, 3, 2, 3, 0, 0, 1, 7, 0, 0, 4, 1, …
+$ Años_acargo_con_mismo_jefe  &lt;dbl&gt; 5, 7, 0, 0, 2, 6, 0, 0, 8, 7, 3, 8, 3, 2, …</code></pre>
 <p><br/><br/></p>
-</div>
-<div id="data-creditos" class="section level4">
-<h4><strong>Data creditos</strong></h4>
-<pre class="r"><code>library(paqueteMOD)
-library(dplyr)
-data(&quot;creditos&quot;)
-glimpse(creditos)</code></pre>
-<pre><code>Rows: 780
-Columns: 5
-$ default    &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
-$ antiguedad &lt;dbl&gt; 37.317808, 37.317808, 30.978082, 9.728767, 8.443836, 6.6054…
-$ edad       &lt;dbl&gt; 76.98356, 73.77534, 78.93699, 51.52877, 38.96986, 44.87945,…
-$ cuota      &lt;dbl&gt; 3020519, 1766552, 1673786, 668479, 1223559, 3517756, 130479…
-$ ingresos   &lt;dbl&gt; 8155593, 6181263, 4328075, 5290910, 5333818, 2710736, 31697…</code></pre>
 <p><em>Adaptado de Weiers, Ronald M, Introducción a la estadística para
 Negocios., 2006.</em></p>
-</div>
 </div>
 </div>
 
