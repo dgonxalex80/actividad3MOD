@@ -52,9 +52,13 @@ Seleccione 3 **variables categóricas** (distintas de rotación) y 3 **variables
 
 <br/>
 
+<div class="content-box-gray">
+
 ### <span style="color:#686868"> **Nota**</span>: 
 
 Debes justificar porque estas variables están relacionadas y que tipo de relación se espera entre ellas (Hipótesis). 
+
+</div>
 
 <br/><br/>
 
@@ -70,9 +74,13 @@ Realiza un análisis univariado (caracterización) de la información contenida 
 
 <br/>
 
+<div class="content-box-gray">
+
 ### <span style="color:#686868"> **Nota**</span>: 
 
 Los indicadores o gráficos se usan dependiendo del tipo de variable (cuantitativas o cualitativas). Incluir interpretaciones de la variable `rotacion`.
+
+</div>
 
 <br/><br/><br/>
 
